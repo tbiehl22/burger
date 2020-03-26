@@ -1,0 +1,23 @@
+body{
+	background-color: rgb(168, 167, 167);
+	text-align: center;
+}
+
+.jumbotron{
+	background-color: rgb(168, 167, 167);
+	color: black;
+}
+
+h1{
+	color: black;
+	font-size: 30px;
+}
+
+.input-group {
+    background-color: black;
+    color: rgb(168, 167, 167);
+    font-size: larger;
+}
+
+
+
