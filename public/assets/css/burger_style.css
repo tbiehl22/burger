@@ -1,23 +1,19 @@
-body{
-	background-color: rgb(168, 167, 167);
-	text-align: center;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
-.jumbotron{
-	background-color: rgb(168, 167, 167);
-	color: black;
+body {
+	margin-bottom: 45px;
+	background-color: rgb(197, 194, 194);
 }
 
-h1{
-	color: black;
-	font-size: 30px;
+.card-header {
+    background-color: rgb(66, 65, 65);
+    color: #fff;
 }
 
-.input-group {
-    background-color: black;
-    color: rgb(168, 167, 167);
-    font-size: larger;
+h1 {
+	color: white;
+
 }
-
-
-
