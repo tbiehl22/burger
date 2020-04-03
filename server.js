@@ -1,12 +1,11 @@
 const connection = require("./config/connection");
 const express = require('express');
-const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));
 
 app.use(express.static(__dirname + '/public'));
 app.use('/', require('./controllers/burger_controller'));
