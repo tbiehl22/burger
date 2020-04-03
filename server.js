@@ -13,12 +13,16 @@ app.use('/', require('./controllers/burger_controller'));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-connection.connect(err => {
-    if (err) {
-        console.log(err);
-    } else {
-        app.listen(PORT, () => {
-            console.log(`App listening on port ${PORT}`);
-        });
-    }
-});
+app.listen(PORT, function() {
+    console.log("APP is listening on PORT " + PORT);
+  });
+
+// connection.connect(err => {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         app.listen(PORT, () => {
+//             console.log(`App listening on port ${PORT}`);
+//         });
+//     }
+// });
