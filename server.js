@@ -1,56 +1,26 @@
-var express = require("express");
-var methodOverride = require("method-override");
-var app = express();
-var bodyParser = require("body-parser");
+const connection = require("./config/connection");
+const express = require('express');
+const bodyParser = require("body-parser");
+const exphbs = require("express-handlebars");
+const app = express();
 
-var port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static("public"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(methodOverride('_method'));
+app.get(express.static(__dirname + '/public'));
+app.get('/', require('./controllers/burger_controller'));
 
-var exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// app.get("/", function (request, response) {
-//     var viewJsPath = path.join(
-//         __dirname,
-//         "controllers",
-//         "burger_controller.js"
-//     );
-
-//     response.sendFile(viewJsPath);
-// });
-
-
-var routes = require("./controllers/burger_controller.js");
-
-app.get("/", routes);
-
-app.listen(port);
-
-
-
-
-// var express = require("express");
-// var app = express();
-
-// var PORT = process.env.PORT || 3000;
-
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
-
-// app.use(express.static("public"));
-
-// // Routes
-// // =============================================================
-// require("./app/routes/api-routes.js")(app);
-
-// // Starts the server to begin listening
-// // =============================================================
-// app.listen(PORT, function() {
-//   console.log("App listening on PORT " + PORT);
-// });
+connection.connect(err => {
+    if (err) {
+        console.log(err);
+    } else {
+        app.listen(PORT, () => {
+            console.log(`App listening on port ${PORT}`);
+        });
+    }
+});
