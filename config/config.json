@@ -1,0 +1,26 @@
+{
+    "development": {
+        "username": "paq62uxxmgux5i3u",
+        "password": "k1qvgjgkp2z0vc2t",
+        "database": "bjcvkp17sqmtshb6",
+        "host": "gtizpe105piw2gfq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "port": 3306,
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "paq62uxxmgux5i3u",
+        "password": "k1qvgjgkp2z0vc2t",
+        "database": "bjcvkp17sqmtshb6",
+        "host": "1gtizpe105piw2gfq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "port": 3306,
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "paq62uxxmgux5i3u",
+        "password": "k1qvgjgkp2z0vc2t",
+        "database": "bjcvkp17sqmtshb6",
+        "host": "1gtizpe105piw2gfq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "port": 3306,
+        "dialect": "mysql"
+    }
+}
