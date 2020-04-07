@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static(__dirname + '/public'));
-app.get('/', require('./controllers/burger_controller'));
+app.use(express.static(__dirname + './public'));
+app.use('/', require('./controllers/burger_controller'));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
