@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.get(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 app.get('/', require('./controllers/burger_controller'));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
