@@ -7,7 +7,7 @@ var port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
 var exphbs = require("express-handlebars");
@@ -20,3 +20,26 @@ var routes = require("./controllers/burger_controller.js");
 app.use("/", routes);
 
 app.listen(port);
+
+
+
+
+// var express = require("express");
+// var app = express();
+
+// var PORT = process.env.PORT || 3000;
+
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+
+// app.use(express.static("public"));
+
+// // Routes
+// // =============================================================
+// require("./app/routes/api-routes.js")(app);
+
+// // Starts the server to begin listening
+// // =============================================================
+// app.listen(PORT, function() {
+//   console.log("App listening on PORT " + PORT);
+// });
