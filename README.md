@@ -10,6 +10,8 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
 
 * The app will store every burger in a database, whether devoured or not.
 
+
+
 <h2>Topics Covered</h2>
 
 * Model-View-Controller (MVC)
